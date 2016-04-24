@@ -91,14 +91,14 @@ gulp.task('json-temp', function() {
 
 
 gulp.task('babel', function() {
-  gulp.src('./_app.js')
+  gulp.src('./src/_*.js')
     .pipe(plumber())
     .pipe(babel())
-    .pipe(gulp.dest('./app/'))
+    .pipe(gulp.dest('./app/dest/'))
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./_*.js', ['babel'])
+  gulp.watch('./src/_*.js', ['babel'])
 });
 
 gulp.task('default', ['babel', 'watch']);
