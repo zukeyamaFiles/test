@@ -21,6 +21,55 @@
 	margin: 0 auto;
 }
 
+
+#over {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 5;
+	display: none;
+}
+
+#in {
+
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	width: 500px;
+	margin-left: -250px;
+	height: 200px;
+	background: #fff;
+	border-radius: 8px;
+	border: solid 1px #333;
+	z-index: 999;
+
+}
+
+#in .txt {
+
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 80px;
+
+}
+
+#in .time {
+
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+#in .time .t {
+	margin: 0 10px;
+	font-size: 30px;
+}
+
 </style>
 
 </head>
@@ -37,7 +86,27 @@
 
 
 
+<audio id="demo" src="./audio/test.mp3"></audio>
 
+
+<script>
+	
+
+var btn = document.getElementById('demo');
+btn.play();
+
+</script>
+
+
+
+<div id="over">
+	
+	<div id="in">
+	<p class="txt">Clear！</p>
+	<p class="time">あなたのタイムは<span class="t"></span>秒です！</p>
+
+</div>
+</div>
 
 <script src="./js/jquery.js"></script>
 
